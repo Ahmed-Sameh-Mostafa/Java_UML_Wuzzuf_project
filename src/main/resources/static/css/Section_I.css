@@ -1,0 +1,30 @@
+
+  .tableFixHead {
+    overflow-y: auto;
+    overflow-x: auto;
+    height: 416px;
+    margin-top:50px;
+    margin-bottom:50px;
+  }
+  .tableFixHead thead th {
+    position: sticky;
+    top: 0;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th,
+  td {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+  }
+  th {
+    background: #253DA1;
+    color: #ffffff;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+

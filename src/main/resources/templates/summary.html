@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Section I</title>
+  <link href="../static/css/Section_I.css" th:href="@{/css/Section_I.css}" rel="stylesheet" />
+</head>
+<body>
+<div class="tableFixHead">
+  <table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Company</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="item, iterStat: ${greeting.data}">
+      <td th:text="${item}" />
+      <td th:text="${greeting2.data[iterStat.index].Voila}">Emp Account</td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

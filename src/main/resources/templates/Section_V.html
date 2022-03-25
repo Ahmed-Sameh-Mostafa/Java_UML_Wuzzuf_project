@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Section V</title>
+    <link href="../static/css/Section_I.css" th:href="@{/css/Section_I.css}" rel="stylesheet" />
+</head>
+<body>
+<h1>Skills Flattening</h1>
+<div class="tableFixHead">
+    <table>
+        <thead>
+        <tr>
+            <!--            Title,Company,Location,Type,Level,YearsExp,Country,Skills-->
+            <th>Skills</th>
+<!--            <th>Count</th>-->
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="item, iterStat: ${skills.data}">
+            <td th:text="${item}" />
+            <!--            <td th:text="${count.data[iterStat.index].Voila}">Emp Account</td>-->
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<h1>Skills Analytics</h1>
+<div class="tableFixHead">
+    <table>
+        <thead>
+        <tr>
+            <!--            Title,Company,Location,Type,Level,YearsExp,Country,Skills-->
+            <th>Skills</th>
+                        <th>Count</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="item, iterStat: ${skills_M.data}">
+            <td th:text="${item}" />
+                        <td th:text="${count_M.data[iterStat.index].Voila}">Emp Account</td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

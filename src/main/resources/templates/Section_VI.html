@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Section VI</title>
+    <link href="../static/css/Section_I.css" th:href="@{/css/Section_I.css}" rel="stylesheet" />
+</head>
+<body>
+<h1>Factorized data</h1>
+<div class="tableFixHead">
+    <table>
+        <thead>
+        <tr>
+            <!--            Title,Company,Location,Type,Level,YearsExp,Country,Skills-->
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>Location</th>
+            <th>Type</th>
+            <th>Level</th>
+            <th>YearsExp</th>
+            <th>Country</th>
+            <th>Skills</th>
+            <th>YearsExpCategory</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="item, iterStat: ${title.data}">
+            <td th:text="${item}" />
+            <td th:text="${company.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${location.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${type.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${level.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${yearsExp.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${country.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${skills.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${YearsExpCategory.data[iterStat.index].Voila}">Emp Account</td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

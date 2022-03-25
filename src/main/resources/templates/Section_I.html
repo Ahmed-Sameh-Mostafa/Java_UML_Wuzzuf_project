@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Section I</title>
+    <link href="../static/css/Section_I.css" th:href="@{/css/Section_I.css}" rel="stylesheet" />
+</head>
+<body>
+<h1>Original data</h1>
+<div class="tableFixHead">
+    <table>
+        <thead>
+        <tr>
+<!--            Title,Company,Location,Type,Level,YearsExp,Country,Skills-->
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>Location</th>
+            <th>Type</th>
+            <th>Level</th>
+            <th>YearsExp</th>
+            <th>Country</th>
+            <th>Skills</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="item, iterStat: ${title.data}">
+            <td th:text="${item}" />
+            <td th:text="${company.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${location.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${type.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${level.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${yearsExp.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${country.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${skills.data[iterStat.index].Voila}">Emp Account</td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<h1>Original Data Summary</h1>
+
+<div>
+
+    <table>
+        <thead>
+        <tr>
+            <!--            Title,Company,Location,Type,Level,YearsExp,Country,Skills-->
+            <th>Summary</th>
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>Location</th>
+            <th>Type</th>
+            <th>Level</th>
+            <th>YearsExp</th>
+            <th>Country</th>
+            <th>Skills</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="item, iterStat: ${summary.data}">
+            <td th:text="${item}" />
+            <td th:text="${title_S.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${company_S.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${location_S.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${type_S.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${level_S.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${yearsExp_S.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${country_S.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${skills_S.data[iterStat.index].Voila}">Emp Account</td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<h1>Schema</h1>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Schema</th>
+            <th:block th:each="item: ${schema_name.data}">
+            <!--            Title,Company,Location,Type,Level,YearsExp,Country,Skills-->
+            <th th:text="${item}"></th>
+            </th:block>
+        </tr>
+        </thead>
+
+
+        <tbody>
+
+        <tr>
+            <td>Type</td>
+            <th:block th:each="item: ${schema_type.data}">
+                <!--            Title,Company,Location,Type,Level,YearsExp,Country,Skills-->
+                <td th:text="${item}"></td>
+            </th:block>
+        </tr>
+        <tr>
+            <td>Nullable</td>
+            <th:block th:each="item: ${schema_nullable.data}">
+                <!--            Title,Company,Location,Type,Level,YearsExp,Country,Skills-->
+                <td th:text="${item}"></td>
+            </th:block>
+        </tr>
+        <tr>
+            <td>Metadata</td>
+            <th:block th:each="item: ${schema_meta.data}">
+                <!--            Title,Company,Location,Type,Level,YearsExp,Country,Skills-->
+                <td th:text="${item}"></td>
+            </th:block>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h1>Cleaned data</h1>
+<div class="tableFixHead">
+    <table>
+        <thead>
+        <tr>
+            <!--            Title,Company,Location,Type,Level,YearsExp,Country,Skills-->
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>Location</th>
+            <th>Type</th>
+            <th>Level</th>
+            <th>YearsExp</th>
+            <th>Country</th>
+            <th>Skills</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="item, iterStat: ${title_C.data}">
+            <td th:text="${item}" />
+            <td th:text="${company_C.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${location_C.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${type_C.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${level_C.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${yearsExp_C.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${country_C.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${skills_C.data[iterStat.index].Voila}">Emp Account</td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+<h1>Cleaned Data Summary</h1>
+
+<div>
+
+    <table>
+        <thead>
+        <tr>
+            <!--            Title,Company,Location,Type,Level,YearsExp,Country,Skills-->
+            <th>Summary</th>
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>Location</th>
+            <th>Type</th>
+            <th>Level</th>
+            <th>YearsExp</th>
+            <th>Country</th>
+            <th>Skills</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="item, iterStat: ${summary_C.data}">
+            <td th:text="${item}" />
+            <td th:text="${title_S_C.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${company_S_C.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${location_S_C.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${type_S_C.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${level_S_C.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${yearsExp_S_C.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${country_S_C.data[iterStat.index].Voila}">Emp Account</td>
+            <td th:text="${skills_S_C.data[iterStat.index].Voila}">Emp Account</td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

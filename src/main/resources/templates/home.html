@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="'Hello, ' + ${name} + '!'"></title>
+</head>
+<body>
+<div class="container">
+
+    <h1>Dataset</h1>
+    <div>
+    <img src="../static/images/pieChart.jpg" width="1000"
+         th:src="@{images/pieChart.jpg}"/>
+    </div>
+
+    <table class="table table-bordered table-striped" id="employeeTable">
+
+        <thead>
+        <tr>
+            <th>Name</th>
+<!--            <th>Company</th>-->
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="item, iterStat: ${greeting.data}">
+            <td th:text="${item}" />
+<!--            <td th:text="${greeting2.data[iterStat.index].Voila}">Emp Account</td>-->
+
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+<!--    <h1>Hello</h1>-->
+<!--    <div th:if="${greeting.data != null}">-->
+<!--        <h1>Result</h1>-->
+<!--        <ul>-->
+<!--            <th:block th:object="${greeting}">-->
+<!--                <li th:each="item : *{data}" th:text="${item}">Item description here...</li>-->
+<!--            </th:block>-->
+<!--        </ul>-->
+<!--    </div>-->
+
+
+</body>
+</html>

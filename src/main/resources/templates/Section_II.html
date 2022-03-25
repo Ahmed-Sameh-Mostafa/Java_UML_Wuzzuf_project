@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Section II</title>
+    <link href="../static/css/Section_I.css" th:href="@{/css/Section_I.css}" rel="stylesheet" />
+</head>
+<body>
+<h1>Company's Job Count</h1>
+<div class="tableFixHead">
+    <table>
+        <thead>
+        <tr>
+            <!--            Title,Company,Location,Type,Level,YearsExp,Country,Skills-->
+            <th>Company</th>
+            <th>Count</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="item, iterStat: ${company.data}">
+            <td th:text="${item}" />
+            <td th:text="${count.data[iterStat.index].Voila}">Emp Account</td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+<h1>Most Company's Job Count</h1>
+<div class="tableFixHead">
+    <table>
+        <thead>
+        <tr>
+            <!--            Title,Company,Location,Type,Level,YearsExp,Country,Skills-->
+            <th>Company</th>
+            <th>Count</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="item, iterStat: ${company_M.data}">
+            <td th:text="${item}" />
+            <td th:text="${count_M.data[iterStat.index].Voila}">Emp Account</td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+<h1>Pie Chart</h1>
+<div>
+    <img src="../static/images/CompJobPie.jpg"
+         th:src="@{images/CompJobPie.jpg}"/>
+</div>
+<p>the company with the highest job count is a combination of companies that wanted to be anonymous </p>
+</body>
+</html>

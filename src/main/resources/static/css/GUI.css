@@ -1,0 +1,75 @@
+
+.button {
+            background-color: #253DA1;
+            box-shadow: 0 6px 0 #000137;
+            color: white;
+            padding: 1em 1.5em;
+            border-radius: 8px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+            width: 50%;
+            font-size: 20px;
+        }
+
+.button:hover {
+  background-color: white;
+  color: #253DA1;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button:active {
+  background-color: #253DA1;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
+
+
+div
+{
+   width:100px;
+   height:75px;
+   background-color:red;
+   border:1px solid black;
+}
+#div2
+{
+   transform:rotate(30deg);
+   -ms-transform:rotate(30deg); /* IE 9 */
+   -moz-transform:rotate(30deg); /* Firefox */
+   -webkit-transform:rotate(30deg); /* Safari and Chrome */
+   -o-transform:rotate(30deg); /* Opera */
+   background-color:yellow;
+}
+
+h1{
+    margin-right: auto;
+    margin-left: auto;
+    color: darkblue;
+    background-color:powderblue;
+}
+
+/*
+.container {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+*/
+

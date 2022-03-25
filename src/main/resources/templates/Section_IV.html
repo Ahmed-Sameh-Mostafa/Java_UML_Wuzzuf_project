@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Section IV</title>
+    <link href="../static/css/Section_I.css" th:href="@{/css/Section_I.css}" rel="stylesheet" />
+</head>
+<body>
+<h1>Most Popular Job Titles</h1>
+<div class="tableFixHead">
+    <table>
+        <thead>
+        <tr>
+            <!--            Title,Company,Location,Type,Level,YearsExp,Country,Skills-->
+            <th>Location</th>
+            <th>Count</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="item, iterStat: ${location.data}">
+            <td th:text="${item}" />
+                        <td th:text="${count.data[iterStat.index].Voila}">Emp Account</td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+<h1>Bar Chart</h1>
+<div>
+    <img src="../static/images/PopAreas.jpg"
+         th:src="@{images/PopAreas.jpg}"/>
+</div>
+</body>
+</html>
