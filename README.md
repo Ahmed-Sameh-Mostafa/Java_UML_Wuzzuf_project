@@ -22,5 +22,3 @@ This demo illustrates a user exploring the application capabilities from display
 5. **YearsExp Factorization**
 	-  Factorized Data
 6. **K-means Model**
-
-https://drive.google.com/file/d/19Rb6imeLVk1fmJSjbflfZXnOGRrPWle7/view?usp=sharing
